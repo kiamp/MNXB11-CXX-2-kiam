@@ -4,6 +4,7 @@
  * */
 
  #include "as1.hpp"
+ #include "as2.hpp"
 #include <iostream>
 
 using namespace homework;
@@ -40,6 +41,25 @@ myData.set(5);
 std::cout << "Setting data to 5" << std::endl;
 
 std::cout << myData.get() << std::endl;
+
+
+std::cout << "ASSIGNMENT 2" << std::endl;
+
+Knight knight1(std::string ("Stig"));
+knight1.setWeapon("GreatAxe");
+knight1.attack();
+
+Sorcerer sorcerer1(std::string ("Britta"));
+sorcerer1.setAbility("Fire bending");
+sorcerer1.attack();
+
+std::cout << "Knight's name is : " << knight1.getName() << std::endl;
+
+Duel<Knight, Sorcerer> duel1(&knight1, &sorcerer1);
+
+duel1.fight();
+
+std::cout << duel1.fight() << std::endl;
 
 return 0;
 }
